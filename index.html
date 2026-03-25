@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
  <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Missão Industrial</title>
@@ -698,6 +697,7 @@
   <style>@view-transition { navigation: auto; }</style>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
  </head>
  <body>
   <div class="container"><!-- Header -->
@@ -757,7 +757,7 @@
         Eletricidade, petróleo e produção em massa
        </div><span class="module-status">Disponível</span>
       </div>
-      <div class="module-card locked" onclick="showLockedMessage()"><span class="module-icon">💻</span>
+      <div class="module-card" onclick="openModule('module3')"><span class="module-icon">💻</span>
        <div class="module-number">
         Módulo 3
        </div>
@@ -766,9 +766,9 @@
        </div>
        <div class="module-description">
         Computadores, internet e transformação digital
-       </div><span class="module-status">🔒 Bloqueado</span>
+       </div><span class="module-status">Disponível</span>
       </div>
-      <div class="module-card locked" onclick="showLockedMessage()"><span class="module-icon">🤖</span>
+      <div class="module-card" onclick="openModule('module4')"><span class="module-icon">🤖</span>
        <div class="module-number">
         Módulo 4
        </div>
@@ -777,9 +777,9 @@
        </div>
        <div class="module-description">
         Inteligência artificial, IoT e automação inteligente
-       </div><span class="module-status">🔒 Bloqueado</span>
+       </div><span class="module-status">Disponível</span>
       </div>
-      <div class="module-card locked" onclick="showLockedMessage()"><span class="module-icon">🌐</span>
+      <div class="module-card" onclick="openModule('module5')"><span class="module-icon">🌐</span>
        <div class="module-number">
         Módulo 5
        </div>
@@ -790,7 +790,7 @@
         Sociedade 5.0, sustentabilidade e bem-estar humano
        </div><span class="module-status">🔒 Bloqueado</span>
       </div>
-      <div class="module-card locked" onclick="openGamePage()"><span class="module-icon">  </span>
+      <div class="module-card locked" onclick="openGamePage()"><span class="module-icon">��</span>
        <div class="module-number">
         Jogo Final
        </div>
@@ -860,23 +860,26 @@
     </div><!-- Game Page -->
     <div id="gamePage" class="page">
      <div class="module-header">
-      <h2 style="color: #667eea; font-size: 32px;">🎮 Industrial Run Quiz</h2>
-      <p style="color: #718096; font-size: 16px;">Parabéns por completar todos os módulos! Agora teste seus conhecimentos neste jogo interativo!</p>
+      <h2 style="color: #667eea; font-size: 32px;">🎮 Jogo Final - Museu Industrial</h2>
+      <p style="color: #718096; font-size: 16px;">Parabéns por completar todos os módulos! Explore o museu interativo e teste seus conhecimentos!</p>
      </div>
-     <div style="background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%); padding: 32px; border-radius: 12px; margin: 24px 0; text-align: center;">
-      <div style="font-size: 64px; margin-bottom: 16px;">
-       🏆
-      </div>
-      <h3 style="color: #667eea; font-size: 24px; margin-bottom: 16px;">Você desbloqueou o jogo final!</h3>
-      <p style="color: #4a5568; font-size: 16px; line-height: 1.6; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Complete todos os desafios do Industrial Run Quiz e mostre que você é um verdadeiro especialista nas Revoluções Industriais!</p><a href="https://www.studyfetch.com/share/feature/arcade_game/cnbraw023zewn51g8n36nos6gwi5xtc5" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 16px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 12px; font-size: 18px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 32px rgba(102, 126, 234, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(102, 126, 234, 0.3)';"> 🎮 Jogar Agora! </a>
+     <div style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); padding: 24px; border-radius: 12px; border-left: 4px solid #8B4513; margin-bottom: 32px;">
+      <h3 style="color: #8B4513; margin-bottom: 12px; font-size: 18px; font-weight: bold;">🏛️ Museu Interativo: Revolução Industrial</h3>
+      <p style="color: #4a5568; font-size: 15px; line-height: 1.6; margin: 0;">Explore uma experiência imersiva que conecta os conteúdos dos 5 módulos! Navegue pela história das revoluções industriais, descubra artefatos históricos e teste seus conhecimentos em um ambiente interativo e envolvente. Boa sorte, explorador! 🚀</p>
+     </div>
+     <div style="background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%); padding: 24px; border-radius: 12px; margin: 24px 0; border: 3px solid #8B4513;"><iframe src="https://view.genially.com/69b3362d508d939cda4b8dd9/interactive-content-museu" style="width: 100%; height: 800px; border: none; border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);" title="Museu Interativo - Revolução Industrial" allow="fullscreen; picture-in-picture"></iframe>
      </div>
      <div style="margin-top: 40px; padding: 24px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 8px;">
-      <h4 style="color: #856404; margin-bottom: 12px; font-size: 18px;">💡 Dicas para o jogo:</h4>
+      <h4 style="color: #856404; margin-bottom: 12px; font-size: 18px;">💡 Dicas para explorar o museu:</h4>
       <ul style="color: #856404; line-height: 1.8; padding-left: 24px;">
-       <li>Revise os conteúdos dos módulos antes de jogar</li>
-       <li>Preste atenção nas perguntas - elas testam tudo que você aprendeu</li>
-       <li>Divirta-se e boa sorte! 🚀</li>
+       <li>Clique em todos os objetos e elementos interativos</li>
+       <li>Leia as descrições e informações de cada artefato</li>
+       <li>Complete todos os desafios dentro do museu</li>
+       <li>Descubra conexões entre os 5 módulos de revoluções</li>
+       <li>Divirta-se explorando a história! 🎯</li>
       </ul>
+     </div>
+     <div style="text-align: center; margin-top: 40px;"><button class="next-module-btn" onclick="goToHome()" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); padding: 14px 40px;">Voltar ao Início ⬅️</button>
      </div>
     </div><!-- Module 2 Page -->
     <div id="module2Page" class="page">
@@ -1037,7 +1040,7 @@
      </div><!-- Results Section -->
      <div id="resultsSection" style="display: none;">
       <div class="results-container">
-       <h3>    Missão Concluída!</h3>
+       <h3>��� Missão Concluída!</h3>
        <div class="medal" id="medalDisplay">
         🏆
        </div>
@@ -1048,7 +1051,7 @@
       </div>
      </div><!-- Challenge: Connection with Present -->
      <div style="margin-top: 48px; padding: 32px; background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%); border-radius: 12px; border: 3px solid #667eea;">
-      <h3 style="color: #667eea; font-size: 24px; margin-bottom: 16px; text-align: center;">   Desafio: Conexão com o Presente</h3>
+      <h3 style="color: #667eea; font-size: 24px; margin-bottom: 16px; text-align: center;">�� Desafio: Conexão com o Presente</h3>
       <p style="color: #4a5568; font-size: 16px; line-height: 1.6; margin-bottom: 24px; text-align: center;">Reflita sobre como a Revolução Industrial impacta sua vida hoje. Compartilhe sua resposta abaixo:</p>
       <form id="challengeForm" style="max-width: 700px; margin: 0 auto;">
        <div style="margin-bottom: 20px;"><label for="studentNameInput" style="display: block; font-weight: bold; color: #2d3748; margin-bottom: 8px; font-size: 14px;"> Seu Nome: </label> <input type="text" id="studentNameInput" required placeholder="Digite seu nome completo" style="width: 100%; padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 15px; transition: all 0.3s ease; box-sizing: border-box;">
@@ -1060,7 +1063,7 @@
        </div><button type="submit" id="submitChallengeBtn" style="width: 100%; padding: 14px 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;"> Enviar Reflexão 🚀 </button>
       </form>
       <div id="challengeSuccess" style="display: none; margin-top: 24px; padding: 20px; background: #c6f6d5; border-radius: 8px; border-left: 4px solid #48bb78; text-align: center;">
-       <p style="color: #22543d; font-weight: bold; font-size: 16px; margin: 0;">   Reflex  o enviada com sucesso! Continue explorando os módulos!</p>
+       <p style="color: #22543d; font-weight: bold; font-size: 16px; margin: 0;">�� Reflex��o enviada com sucesso! Continue explorando os módulos!</p>
       </div>
      </div><!-- Medals System -->
      <div style="margin-top: 48px;">
@@ -1371,15 +1374,15 @@
     function openGamePage() {
       // Check if all modules are completed (for now, just show locked message)
       // In the future, this would check actual progress
-      showToast('🔒 Complete todos os módulos para desbloquear o jogo!');
+      // showToast('🔒 Complete todos os módulos para desbloquear o jogo!');
       
       // Uncomment below to enable the game page
-      // currentPage = 'game';
-      // document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-      // document.getElementById('gamePage').classList.add('active');
-      // document.getElementById('backBtn').style.display = 'block';
-      // window.scrollTo(0, 0);
-      // showToast('🎮 Jogo desbloqueado! Boa sorte!');
+      currentPage = 'game';
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.getElementById('gamePage').classList.add('active');
+      document.getElementById('backBtn').style.display = 'block';
+      window.scrollTo(0, 0);
+      showToast('🎮 Jogo desbloqueado! Boa sorte!');
     }
 
     // Setup Event Listeners
@@ -1495,7 +1498,7 @@
           name: 'Liverpool',
           coords: [53.4084, -2.9916],
           description: '🚢 Porto Comercial',
-          details: 'Principal porto de exportação de produtos industrializados. Conectava a Inglaterra com o mundo através do com  rcio marítimo.',
+          details: 'Principal porto de exportação de produtos industrializados. Conectava a Inglaterra com o mundo através do com��rcio marítimo.',
           country: 'Inglaterra'
         },
         {
@@ -1558,7 +1561,7 @@
         {
           name: 'Cleveland',
           coords: [41.4993, -81.6944],
-          description: '🛢️ Petr  leo e Aço',
+          description: '🛢️ Petr��leo e Aço',
           details: 'Centro de refino de petróleo (Standard Oil de Rockefeller) e produção de aço. Importante porto nos Grandes Lagos.',
           country: 'EUA'
         },
@@ -1566,7 +1569,7 @@
           name: 'Baltimore',
           coords: [39.2904, -76.6122],
           description: '🚢 Porto Industrial',
-          details: 'Porto estrat  gico para comércio e indústria. Centro de construção naval e processamento de tabaco.',
+          details: 'Porto estrat��gico para comércio e indústria. Centro de construção naval e processamento de tabaco.',
           country: 'EUA'
         }
       ];
@@ -1715,7 +1718,7 @@
       let feedback = 'Continue praticando!';
       if (score === 5) {
         medal = '🥇';
-        feedback = 'Excelente! Voc   dominou o conteúdo!';
+        feedback = 'Excelente! Voc�� dominou o conteúdo!';
       } else if (score >= 4) {
         medal = '🥈';
         feedback = 'Muito bem! Ótimo desempenho!';
@@ -1758,7 +1761,7 @@
 
     // Complete Module
     function completeModule() {
-      showToast('🎉 Parabéns! M    dulo 1 concluído!');
+      showToast('🎉 Parabéns! M����dulo 1 concluído!');
       goToHome();
     }
 
@@ -1831,7 +1834,7 @@
           submitBtn.textContent = 'Enviar Reflexão 🚀';
         }
       } else {
-        showToast('⚠️ Sistema de dados não dispon    vel');
+        showToast('⚠️ Sistema de dados não dispon����vel');
         submitBtn.disabled = false;
         submitBtn.textContent = 'Enviar Reflexão 🚀';
       }
@@ -1851,5 +1854,5 @@
     // Initialize on load
     initializeApp();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e1f862ac6f5cb16',t:'MTc3NDQ1ODU3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e208d6416ddcb16',t:'MTc3NDQ2OTM1Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
